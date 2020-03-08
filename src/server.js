@@ -14,7 +14,7 @@ const withDB = async (operations) => {
     
     const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
 
-    const db = client.db('mern-blog');
+    const db = client.db('my-blog');
 
     await operations(db);
     
