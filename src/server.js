@@ -1,9 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv'
 import { MongoClient } from 'mongodb';
 import path from 'path';
 
 const app = express();
+
+dotenv.config()
 
 app.use(express.static(path.join(__dirname, '/build')));
 
