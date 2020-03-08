@@ -13,7 +13,7 @@ const withDB = async (operations, res) => {
   try {
     
     // const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
-    const client = await MongoClient.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0-lb6on.mongodb.net/test?retryWrites=true&w=majority`, {
+    const client = await MongoClient.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true 
     });
