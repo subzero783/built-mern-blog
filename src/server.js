@@ -15,7 +15,7 @@ const withDB = async (operations, res) => {
     // const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
     const client = await MongoClient.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
-      useUnifiedTopology: true 
+      useUnifiedTopology: true  
     });
 
     const db = client.db('mern-blog');
