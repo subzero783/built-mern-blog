@@ -13,7 +13,7 @@ const withDB = async (operations) => {
   try {
     
     // const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
-    const client = await MongoClient.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0-lb6on.mongodb.net`, {useNewUrlParser: true});
+    const client = await MongoClient.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0-lb6on.mongodb.net/test?retryWrites=true&w=majority`, {useNewUrlParser: true});
 
     const db = client.db('mern-blog');
 
