@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npm run build && nodemon src/server.js --exec babel-node",
     "heroku-postbuild": "npm install",
-    "start": "babel-node server.js"
+    "start": "babel-node src/server.js"
   },
   "keywords": [],
   "author": "",
